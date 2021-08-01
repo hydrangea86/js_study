@@ -19,10 +19,13 @@ var he77llo = 777;
 // var hello!@ = '안녕'; (x)
 var $bye = '잘가';
 var my_friend = '둘리';
+console.log($bye + ' ' + my_friend);
+console.log(`${$bye} ${my_friend}`);
 
 // 4. 띄어쓰기 불가능
 // var user phone number = '01012344321' (x)
-var userphonenumber = 01012344321;
+var userphonenumber = '01012344321';
+console.log(userphonenumber);
 
 // coding convention: 관례
 var user_phone_number = 1; //snake case   (파이썬, SQL 채용)
