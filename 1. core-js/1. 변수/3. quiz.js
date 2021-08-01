@@ -5,9 +5,9 @@
 3. myName의 값을 admin에 복사해 보세요.
 4. admin의 값을 console 창에 띄워보세요. "John"이 출력되어야 합니다.
 */
-var admin, myName;
-myName = 'John';
-admin = myName;
+var admin, myName = 'John';
+admin = 'kim'
+myName = admin;
 console.log(admin);
 
 

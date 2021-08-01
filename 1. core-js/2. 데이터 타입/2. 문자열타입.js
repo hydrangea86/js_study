@@ -25,6 +25,7 @@ console.log(filepath);
 
 //템플릿 리터럴 (ES6: 2015) ``
 var lyrics = '링딩동 링딩동 링디기딩기디링딩동~~~~~\n링딩동 링딩동 링디기딩기디링딩동~~~~~\n링딩동 링딩동 링디기딩기디링딩동~~~~~\n링딩동 링딩동 링디기딩기디링딩동~~~~~';
+var lyrics = '링딩동 링딩동 링디기딩기디링딩동~~~~~\n링딩동 링딩동 링디기딩기디링딩동~~~~~\n링딩동 링딩동 링디기딩기디링딩동~~~~~링딩동 링딩동 링디기딩기디링딩동~~~~~';
 console.log(lyrics);
 
 lyrics = `링딩동 링딩동 링디기딩기디링딩동~~~~~
@@ -36,6 +37,7 @@ console.log(lyrics);
 var month = 8;
 var day = 15;
 var anni = '광복절'
+var weekDay = '목요일'
 
 console.log(month + '월 ' + day + '일은 ' + anni + '입니다.');
-console.log(`${month}월 ${day}일은 ${anni}입니다.`);
+console.log(`${month}월 ${day}일 ${weekDay}은 ${anni}입니다.`);
