@@ -11,7 +11,7 @@
 <힌트> 다중 분기 조건문의 순서에 주의할 것!
 */
 
-var num = +prompt(`정수를 입력하시오.`)
+var num = +prompt(`정수를 입력하시오.`);
 console.log(`숫자: ${num}`);
 
 if (num === 0) {

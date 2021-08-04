@@ -16,7 +16,7 @@ var x = 1;
 var count = 0;
 while (x <= 10) {
     console.log(`메롱~!`);
-    count ++
+    count ++;
     x++;
 }
 console.log(`총 메롱~!: ${count}`);
@@ -40,14 +40,14 @@ while (num2 <= 350) {
     if (num2 % 9 === 0 && num2 % 18 !== 0){
         console.log(num2);
     }
-    num2++
+    num2++;
 }
 
 
 console.log(`=====================================================`);
 // 1~4000사이 정수 중 11의 배수의 개수를 구하시오.
 var num3 = 1;
-var count = 0
+var count = 0;
 while (num3 <= 4000) {
     if(num3 % 11 === 0) {
         count++;
