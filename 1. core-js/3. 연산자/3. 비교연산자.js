@@ -34,11 +34,9 @@ console.log('=================================');
 
 //유니코드 문자체계 대문자 A:65 부터 시작 /소문자 a:97 부터 시작/ 한글 가:44032 부터 시작 
 console.log('apple' === 'APPLE');
-
 console.log('ace' < 'ade');
 console.log('new york' < 'zebra');
 console.log('Zebra' < 'ace');
-
 console.log('복숭아' < '감자');
 
 //같은 문자형태일 경우 사전에서 뒤에 나올수록 크다

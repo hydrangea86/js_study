@@ -16,7 +16,7 @@ var apple ='사과';
 apple = null;
 
 var hello = saying => {
-    if (saying ==='즐') return null;
+    if (saying === '즐') return null;
     else return "안뇽~";
 }
 
