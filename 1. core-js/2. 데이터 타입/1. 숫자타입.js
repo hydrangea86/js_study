@@ -6,4 +6,4 @@ console.log(typeof decimal);
 console.log(typeof floatingPoint);
 
 // js는 모든 숫자데이터를 실수로 처리
-console.log(10/4);
+console.log(10 / 4);

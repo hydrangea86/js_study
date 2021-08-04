@@ -14,7 +14,8 @@ console.log(`x: ${x}`);
 
 var a = 5;
 
-a = + 3;
+// = +3은 양수뜻으로 인식함. 
+a = + 3;    
 console.log(`a: ${a}`);
 
 var b = 7;

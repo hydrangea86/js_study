@@ -13,10 +13,13 @@ console.log(total);
 console.log(`==================================================`);
 
 var x = 1;
+var count = 0;
 while (x <= 10) {
     console.log(`메롱~!`);
+    count ++
     x++;
 }
+console.log(`총 메롱~!: ${count}`);
 
 console.log(`====================================================`);
 
