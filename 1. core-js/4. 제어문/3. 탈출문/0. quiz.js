@@ -18,7 +18,7 @@ while (++i < 5) {
 
 /*
 var x = 2;
-var y = 2++ * 3;
+var y = x++ * 3;
 console.log(y);
 console.log(x);
 */
