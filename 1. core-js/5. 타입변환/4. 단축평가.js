@@ -12,7 +12,7 @@ console.log(`======================`);
 
 var x = 10;
 
-// if (x > 0) console.log(`xsms 0보다 크다`);
+// if (x > 0) console.log(`x는 0보다 크다`);
 
 x > 0 && console.log(`x는 0보다 크다`);
 
