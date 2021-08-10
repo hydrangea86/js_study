@@ -12,12 +12,19 @@
 var scores = [98, 32, 66, 87, 49, 12, 100, 99, 100];
 var total = 0;
 
+for (var s of scores) {
+    total += s;
+}
+console.log(total);
+
+/*
 for (var i =0; i < scores.length; i++) {
     total += scores[i]
 }
+
 var avg = total / scores.length
 var prettierAvg = Math.round(avg * 10 ** 2) / 10 ** 2;
 console.log(`총 합계: ${total}`);
 console.log(`평균: ${prettierAvg}`);
-
+*/
 
