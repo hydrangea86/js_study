@@ -13,12 +13,13 @@ var scores = [98, 32, 66, 87, 49, 12, 100, 99, 100];
 var total = 0;
 
 for (var s of scores) {
+    console.log(s);
     total += s;
 }
 console.log(total);
 
 /*
-for (var i =0; i < scores.length; i++) {
+for (var i = 0; i < scores.length; i++) {
     total += scores[i]
 }
 

@@ -1,9 +1,17 @@
+
+
 var weekDays = [`월`, `화`, `수`, `목`, `금`, `토`, `일`];
 
 // 배열 전체 순회 반복문 for ~ of
 for (var day of weekDays) {
     console.log(day + `요일`);
 }
+console.log(`====================================`);
+var allDays = ''
+for (var day of weekDays) {
+    allDays += `${day}요일 `;
+}
+console.log(allDays);
 
 console.log(`==================================`);
 
