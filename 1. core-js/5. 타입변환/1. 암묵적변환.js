@@ -8,7 +8,7 @@ var numStr = 200 + ''; // '200'
 
 var logic = true;
 var logic = '' + true; //논리 타입에서 문자열로 타입 바뀜
-console.log(logic);
+console.log(typeof logic);
 
 
 var ex2 = 100 - `30`;
