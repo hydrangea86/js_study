@@ -7,7 +7,7 @@
 */
 var admin, myName = 'John';
 admin = 'kim'
-myName = admin;
+admin = myName;
 console.log(admin);
 
 

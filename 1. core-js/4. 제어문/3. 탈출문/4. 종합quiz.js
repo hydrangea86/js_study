@@ -1,26 +1,5 @@
 
 
-var answer = 0;
-var noAnswer = 0;
-
-while (true) {
-    var rn = Math.floor(Math.random() * 50) + 1;
-    var rn1 = Math.floor(Math.random() * 50) + 1;
-    var question = +prompt(`${rn} + ${rn1} = ??`)
-    if (question === 0) {
-        break;
-    }else if (rn + rn1 === question) {
-        answer++;
-    }else {
-        noAnswer++;
-    }
-    alert(`맞힌 총 개수: ${answer}`);
-    alert(`틀힌 총 개수: ${noAnswer}`);
-}
-
-
-
-
 //정답횟수와 오답횟수를 누적할 변수 선언
 var correctCount = 0, wrongCount = 0;
 

@@ -42,11 +42,13 @@ console.log(str);
 console.log(`=======================================`);
 var arr1 = [10, 20, 30];
 var arr2 = [500, 300, 100];
+var arr3 = [700, 600];
 
-var concatArr = arr1.concat(arr2);
+var concatArr = arr1.concat(arr2, arr3);
 console.log(concatArr);
 console.log(arr1);
 console.log(arr2);
+console.log(arr3);
 
 //includes() : 배열의 특성 요소가 있는지 확인
 console.log(`=======================================`);

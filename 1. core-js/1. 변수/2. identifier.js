@@ -14,7 +14,7 @@ console.log(BANANA);
 var hello7 = 77;
 var he77llo = 777;
 
-// 특수문자는 %, _ 외 사용금지
+// 특수문자는 $, _ 외 사용금지
 // var my-adder = '대전 서구'; (x)
 // var hello!@ = '안녕'; (x)
 var $bye = '잘가';

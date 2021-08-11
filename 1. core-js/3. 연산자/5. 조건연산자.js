@@ -1,3 +1,4 @@
+
 /*
 - money변수에 돈의 액수를 정수형태로 저장하고
   money의 값이 5000 이상이면 '김치찌개'를
@@ -17,6 +18,5 @@ alert(`선택된 음식은 ${food} 입니다.`);
 console.log(`선택된 음식: ${food}`);
 
 money >= 10000 
-? console.log('부자시군요?') 
-: console.log('가난하시군요?');
+? console.log('부자시군요?') : console.log('가난하시군요?');
 

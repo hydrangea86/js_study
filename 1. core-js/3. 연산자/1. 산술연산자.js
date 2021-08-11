@@ -24,6 +24,7 @@ console.log(Math.pow(num, 3)); //ES5
 var x = 3;
 x++;
 ++x;
+
 console.log(`x: ${x}`);
 x--;
 console.log(`x: ${x}`);

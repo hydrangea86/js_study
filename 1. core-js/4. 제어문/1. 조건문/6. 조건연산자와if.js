@@ -7,12 +7,14 @@ var money = 5000;
 var food = money >= 5000 ? '김치찌개' : (money >= 1000 ? '라면' : '굶어');
 
 // if문 사용
-var food;
+var money = 300;
 if (money >= 5000) {
     food = '김치찌개';
-} else if (money >= 1000{
+} else if (money >= 1000) {
     food = '라면';
 } else {
     food = '굶어';
 }
+
+console.log(food);
 

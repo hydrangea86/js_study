@@ -14,6 +14,7 @@ console.log(hello);
 // null -> 의도적으로 없는 값
 var apple ='사과';
 apple = null;
+console.log(apple);
 
 var hello = saying => {
     if (saying === '즐') return null;
