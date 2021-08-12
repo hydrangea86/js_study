@@ -32,8 +32,9 @@ var salaries = {
     park: 1600000,
     lee: 1300000
 }
-for (var wage in salaries) {
-    total += (salaries[wage]);
+
+for (var eachWage in salaries) {
+    total += (salaries[eachWage]);
 }
 console.log(`급여 총합: ${total}`);
 
