@@ -34,7 +34,7 @@ var salaries = {
 }
 
 for (var eachWage in salaries) {
-    total += (salaries[eachWage]);
+    total += (salaries[eachWage]); //(salaries'kim')
 }
 console.log(`급여 총합: ${total}`);
 
