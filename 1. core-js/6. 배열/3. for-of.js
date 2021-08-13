@@ -7,7 +7,7 @@ for (var day of weekDays) {
     console.log(day + `요일`);
 }
 console.log(`====================================`);
-var allDays = ''
+var allDays = '';
 for (var day of weekDays) {
     allDays += `${day}요일 `;
 }

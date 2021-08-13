@@ -20,7 +20,7 @@ console.log(`키: ${height}, 나이:${age}`);
 console.log(typeof height);
 
 
-if (height >=140 && age >=8) {
+if (height >= 140 && age >= 8) {
     alert(`놀이기구를 탈 수 있습니다.`);
 }
 else  {

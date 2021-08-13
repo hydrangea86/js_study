@@ -21,7 +21,7 @@ function multi(n1, n2) {
     console.log(`${n1} x ${n2} = ${n1 * n2}`);
 }
 
-// for(;;) == while (true) -> 무한리프
+// for(;;) == while (true) -> 무한루프
 for(;;) {
     break;
 }
@@ -59,10 +59,10 @@ for (var i = 0; i < 10; i++){
 }
 */
 
-console.log(`====================================`);
-
 var result = add(10, 20);
 var triple = result * 3;
+console.log(triple);
+console.log(`====================================`);
 
 // return값이 없는 함수는 아무 것도 반환하지 않는다.
 // 따라서 변수에 저장할 수 없고, 다른 함수의 인수로 사용할 수 없음
