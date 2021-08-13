@@ -9,7 +9,7 @@ var articles = {
     pageNumber: 11, //페이지넘버
     articleList: [  //게시물 데이터
         {
-            bno: 5, //글번호
+            bno: 0, //글번호
             title: '뽀로로랜드',
             write: '김뽀로로',
             content: '즐~',
@@ -17,7 +17,7 @@ var articles = {
             regDate: '2021-08-11'
         }, 
         {
-            bno: 4, //글번호
+            bno: 1, //글번호
             title: '메롱메롱',
             write: '박뽀로로',
             content: '메롱',
@@ -25,7 +25,7 @@ var articles = {
             regDate: '2021-08-11'
         }, 
         {
-            bno: 3, //글번호
+            bno: 2, //글번호
             title: '안녕안녕',
             write: '김철수',
             content: '잘가세여~~',

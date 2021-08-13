@@ -30,7 +30,7 @@ function foo() {
     var n = 0;
     while (true) {
         n++;
-        if (n === 5) return; // break는 while문에서 끝나는 거지만 return은 함수가 끝남
+        if (n === 5) return; // break는  무한루프 while문에서 끝나는 거지만 return은 함수가 끝남
     }
     console.log(`안녕~~`);
 }
