@@ -1,4 +1,3 @@
-
 /*==============================================================================================================================================
         - Quiz. 
         Q. n개의 정수를 전달하면 해당 정수들의 총합과 평균을 
@@ -8,19 +7,24 @@
         console.log(`총합: ${result.total}, 평균: ${result.avg}`);
 */
 
-function calcNumbersTotalAndAverage(...nums) {
-    var info = {
+console.log(`====================================================================================================================================`);
+
+function calcNumbersTotalAndAverage(...num) {
+    var scoreInfo = {
         total: 0,
         avg: 0
     };
-    for (var n of nums) {
-        info.total += n;
+    for (var eachScore of num) {
+        scoreInfo.total += eachScore;
     }
-    info.avg = info.total / nums.length;
-    return info;
+    scoreInfo.avg = scoreInfo.total / num.length;
+    return scoreInfo;
 }
-var result = calcNumbersTotalAndAverage(90, 80, 100, 90, 100, 80);
+
+var result = calcNumbersTotalAndAverage(90, 80, 100, 90);
 console.log(`총합: ${result.total}, 평균: ${result.avg}`);
+
+
 
 
 /*==============================================================================================================================================
@@ -36,6 +40,8 @@ console.log(`총합: ${result.total}, 평균: ${result.avg}`);
         console.log(`약수의 개수: ${divCount}개`);
 */
 
+console.log(`====================================================================================================================================`);
+
 function calcDivisor(n) {
     var count = 0;
     for (i = 1; i <= n; i++) {
@@ -46,9 +52,9 @@ function calcDivisor(n) {
     }
     return count;
 }
-
-var divCount = calcDivisor(15);
-console.log(`약수의 개수: ${divCount}`);
+var num = 15;
+var divCount = calcDivisor(num);
+console.log(`약수의 개수: ${divCount}개`);
 
 
 /*==============================================================================================================================================
@@ -68,17 +74,20 @@ console.log(`약수의 개수: ${divCount}`);
         console.log(`키 -> ${h}cm, 체중 -> ${w}kg의 체질량지수는 ${myBmi}입니다.`);
 */
 
+console.log(`====================================================================================================================================`);
+
 function calcBMI(h, w) {
-    var bmi = w / ((h / 100) ** 2);
-    if (bmi >= 25.0) {
+    var BMI = w / ((h / 100) ** 2);
+    if (BMI >= 25) {
         console.log(`당신은 과체중입니다.`);
-    } else if (bmi <= 18.5) {
+    } else if (BMI <= 18.5) {
         console.log(`당신은 저체중입니다.`);
     } else {
         console.log(`당신은 정상체중입니다.`);
     }
-    return bmi = Math.floor(bmi * 10 ** 2) / 10 ** 2;
+    return BMI = Math.floor(BMI * 10 ** 4) / 10 ** 4;
 }
 var h = 178.4, w = 78.2;
-var myBmi = calcBMI(178.4, 78.2);
-console.log(`키 -> ${h}cm, 체중 -> ${w}kg의 체질량지수는 ${myBmi}입니다.`);
+var myBMI = calcBMI(h, w);
+console.log(`키: ${h}cm, 몸무게: ${w}kg의 체질량지수는 ${myBMI}입니다.`);
+
