@@ -9,16 +9,16 @@
 
 console.log(`====================================================================================================================================`);
 
-function calcNumbersTotalAndAverage(...num) {
+function calcNumbersTotalAndAverage(...nums) {
     var scoreInfo = {
         total: 0,
         avg: 0
     };
-    for (var eachScore of num) {
+    for (var eachScore of nums) {
         scoreInfo.total += eachScore;
     }
-    scoreInfo.avg = scoreInfo.total / num.length;
-    return scoreInfo;
+    scoreInfo.avg = scoreInfo.total / nums.length;
+    return scoreInfo; // return {}
 }
 
 var result = calcNumbersTotalAndAverage(90, 80, 100, 90);
@@ -44,7 +44,7 @@ console.log(`===================================================================
 
 function calcDivisor(n) {
     var count = 0;
-    for (i = 1; i <= n; i++) {
+    for (var i = 1; i <= n; i++) {
         if (n % i === 0) {
             console.log(i);
             count++;
@@ -85,9 +85,35 @@ function calcBMI(h, w) {
     } else {
         console.log(`당신은 정상체중입니다.`);
     }
-    return BMI = Math.floor(BMI * 10 ** 4) / 10 ** 4;
+    return round(BMI, 2);
+    /*
+    var prettier = round(BMI, 2);
+    return prettier;
+    */
+}
+
+// 원하는 자릿수만큼 반올림 해주는 함수
+function round(number, pos) {
+    return BMI = Math.round(number * 10 ** pos) / 10 ** pos;
 }
 var h = 178.4, w = 78.2;
 var myBMI = calcBMI(h, w);
 console.log(`키: ${h}cm, 몸무게: ${w}kg의 체질량지수는 ${myBMI}입니다.`);
 
+
+console.log(`====================================================================================`);
+
+function r1( ){
+    console.log(`r1 호출`);
+    return 4;
+}
+function r10( ){
+    console.log(`r10 호출`);
+    return (30+r1( ));
+}
+function r100( ){
+    console.log(`r100 호출`);
+    return (200+r10( ));
+}
+
+console.log(r100())
