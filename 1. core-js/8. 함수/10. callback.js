@@ -1,4 +1,3 @@
-
 function showNumbers(n) {
     for (var i = l; i <= n; i++) {
         if (true) {
@@ -49,3 +48,26 @@ function sayHello(callback) {
 
 sayHello((msg) => console.log(msg + ' 바나나쥬스 주세요1~'));
 
+console.log(`=================================================`);
+
+/*
+    숫자배열을 전달하면 해당 배열을 조건부로 필터링해서 
+    복사 배열을 리턴하는 함수
+    ex) [1,2,3,....,100] 배열을 함수에 전달 -> 짝수조건을 
+    걸면 [2,4,6,8,10,...98,100]이 리턴
+*/
+
+function filter(array, condition) {
+    //필터링이 끝난 배열
+    var filteredAarray = [];
+    for (var n of array) {
+        if (condition(n)) {
+            filteredAarray.push(n);
+        }
+    }
+    return filteredAarray;
+}
+
+var arr = [1,2,3,4,5,6,7,8,9,10];
+var newArr = filter(arr, n => n % 4 === 0);
+console.log(newArr);
