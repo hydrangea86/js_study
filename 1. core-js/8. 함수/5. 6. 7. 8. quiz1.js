@@ -42,18 +42,18 @@ console.log(`총합: ${result.total}, 평균: ${result.avg}`);
 
 console.log(`====================================================================================================================================`);
 
-function calcDivisor(n) {
-    var count = 0;
-    for (var i = 1; i <= n; i++) {
-        if (n % i === 0) {
-            console.log(i);
-            count++;
+function calcDivisor(targetNumber) {
+    var divisors = []; //약수들을 저장할 배열
+    for (var n = 1; n <= targetNumber; n++) {
+        if (targetNumber % n === 0) { //나누어 떨어졌을 때(약수)
+            divisors.push(n); //해당 피제수를 배열에 저장
         }
     }
-    return count;
+    console.log(`${targetNumber}의 약수: [${divisors}]`);
+    return divisors.length;
 }
-var num = 15;
-var divCount = calcDivisor(num);
+
+var divCount = calcDivisor(100);
 console.log(`약수의 개수: ${divCount}개`);
 
 
@@ -76,29 +76,29 @@ console.log(`약수의 개수: ${divCount}개`);
 
 console.log(`====================================================================================================================================`);
 
-function calcBMI(h, w) {
-    var BMI = w / ((h / 100) ** 2);
-    if (BMI >= 25) {
-        console.log(`당신은 과체중입니다.`);
-    } else if (BMI <= 18.5) {
-        console.log(`당신은 저체중입니다.`);
-    } else {
-        console.log(`당신은 정상체중입니다.`);
-    }
-    return round(BMI, 2);
-    /*
-    var prettier = round(BMI, 2);
+function calcBMI(height, weight) {
+    
+    var m = height / 100;
+    var kg = weight;
+    //bmi 공식
+    var bmi = kg / (m * m);
+
+    if (bmi >= 25.0) console.log('당신은 과체중입니다.');
+    else if (bmi <= 18.5) console.log('당신은 저체중입니다.');
+    else console.log('당신은 정상체중입니다.');
+
+    var prettier = round(bmi, 2);
     return prettier;
-    */
 }
 
-// 원하는 자릿수만큼 반올림 해주는 함수
+//원하는 자릿수만큼 반올림해주는 함수
 function round(number, pos) {
-    return BMI = Math.round(number * 10 ** pos) / 10 ** pos;
+    return Math.round(number * 10 ** pos) / 10 ** pos;
 }
+
 var h = 178.4, w = 78.2;
-var myBMI = calcBMI(h, w);
-console.log(`키: ${h}cm, 몸무게: ${w}kg의 체질량지수는 ${myBMI}입니다.`);
+var myBmi = calcBMI(h, w);
+console.log(`키 -> ${h}cm, 체중 -> ${w}kg의 체질량지수는 ${myBmi}입니다.`);
 
 
 console.log(`====================================================================================`);

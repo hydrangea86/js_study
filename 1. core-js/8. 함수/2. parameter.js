@@ -45,6 +45,8 @@ function sayHello(language=`한국어`) {
 }
 
 sayHello();
+sayHello(`영어`);
+
 
 // 매개변수가 없는 함수
 

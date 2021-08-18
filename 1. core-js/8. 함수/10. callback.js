@@ -1,5 +1,5 @@
 function showNumbers(n) {
-    for (var i = l; i <= n; i++) {
+    for (var i = 1; i <= n; i++) {
         if (true) {
             console.log(i);
         }
@@ -7,7 +7,7 @@ function showNumbers(n) {
 }
 
 function showEvenNumbers(n) {
-    for (var i = l; i <= n; i++) {
+    for (var i = 1; i <= n; i++) {
         if (i % 2 === 0) {
             console.log(i);
         }
@@ -15,7 +15,7 @@ function showEvenNumbers(n) {
 }
 
 function showOddNumbers(n) {
-    for (var i = l; i <= n; i++) {
+    for (var i = 1; i <= n; i++) {
         if (i % 2 === 1) {
             console.log(i);
         }
