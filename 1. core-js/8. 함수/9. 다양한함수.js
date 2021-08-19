@@ -99,7 +99,7 @@ sayHello();
 console.log(`=============================`);
 
 
-// 정수 n을 전달하면 해당 정수가 짝수인지 판별
+// 정수 n을 전달하면 해당 정수가 짝수인지 판별 매개 변수 하나 일 때 ()소괄호 생략 가능
 
 var isEvenNumber = (n) => n % 2 === 0;
 
@@ -107,6 +107,6 @@ console.log(isEvenNumber(5));
 
 // 정수 n을 전달하면 n의 제곱값이 리턴되는 화살표 함수
 
-var doubleMultiply = (n) => n ** 2;
+var doubleMultiply = n => n ** 2;
 
 console.log(doubleMultiply(4));
