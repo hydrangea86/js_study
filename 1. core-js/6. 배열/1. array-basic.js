@@ -20,6 +20,6 @@ console.log(fruits);
 // 배열 전체 요소 참조(배열 순회(iteration))
 console.log(`================================`);
 
-for (var i =0; i < fruits.length; i++) {
+for (var i = 0; i < fruits.length; i++) {
 console.log(fruits[i] + `마시써`);
 }
