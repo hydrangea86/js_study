@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+
+</head>
+<body>
+    
+
+    <!-- emmet 문법 div>ul>li*3 / id는 중복 안됌 / class는 중복 가능 -->
+
+
+        <ul>
+            <li id="apple">사과</li>
+            <li id="banana">바나나</li>
+            <li id="grape">포도</li>
+            <li id="pineapple">파인애플</li>
+        </ul>
+        <img src="" alt="">
+
+    <script> 
+        const $bnn = document.getElementById('banana');
+        console.log($bnn.textContent);
+
+        $bnn.textContent = "빠나나!!";
+        $bnn.style.fontSize = "2em";
+        $bnn.style.fontWeight = "bold";
+        
+
+     //id가 grape인 요소노드를 취득하여
+     //배경색상을 violet으로 변경 (css사용금지)
+     const $bnn1 = document.getElementById('grape');
+     $bnn1.style.background = "violet";
+     $bnn1.style.width = "70px";
+    </script>
+
+
+</body>
+</html>

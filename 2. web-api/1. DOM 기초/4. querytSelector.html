@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li.fr.apple {
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+    
+
+    <!-- emmet 문법 div>ul>li*3 / id는 중복 안됌 / class는 중복 가능 -->
+
+        <ul id="fruits">
+            <li class="fr apple">사과</li>
+            <li class="fr banana">바나나</li>
+            <li class="fr grape">포도</li>
+            <li class="fr pineapple">파인애플</li>
+        </ul>
+       
+
+    <script> 
+        //const $banana = document.querySelector('.banana');
+        //const $banana = document.querySelector('ul > li:nth-child(2)');
+        const $banana = document.querySelector('.apple + li');
+        $banana.style.color = 'yellow';
+
+        const $elems = document.querySelectorAll('#fruits > li');
+        console.log($elems);
+
+    </script>
+
+
+</body>
+</html>
