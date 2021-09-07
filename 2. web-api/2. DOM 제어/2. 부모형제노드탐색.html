@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- .wrap>ul#fruits>li*3 -->
+    <div class="wrap">
+        <ul id="fruits">
+            <li>사과</li>
+            <li>바나나</li>
+            <li>포도</li>
+        </ul>
+    </div>
+    
+    <!-- table#board>tr*2>td*2 -->
+    <table id="board">
+        <tr>
+            <td>A</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td>D</td>
+        </tr>
+    </table>
+    <script>
+
+        const $banana = document.querySelector('#fruits > li:nth-child(2)');
+
+        // 부모노드 탐색
+        const $parent = $banana.parentNode;
+        console.log($parent);
+        
+        const $wrap = $banana.parentNode.parentNode;
+        console.log($wrap);
+
+        const $last = $banana.parentNode.lastElementChild;
+        console.log($last);
+
+        // 다음형제노드 탐색
+        const $next = $banana.nextElementSibling;
+        console.log($next);
+
+        // 이전형제노드 탐색
+        const $prev = $banana.previousElementSibling;
+        console.log($prev);
+
+        // 테이블 요소노드 취득
+        const $board = document.getElementById('board');
+        
+        // table태그는 자식태그로 자동으로 tbody가 삽입됨에 주의
+        $board.firstElementChild.firstElementChild.lastElementChild.textContent ='BBB;'
+
+    </script>
+</body>
+</html>

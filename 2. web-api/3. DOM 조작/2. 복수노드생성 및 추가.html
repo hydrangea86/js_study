@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="fruits"></ul>
+
+    <script>
+        const fruitList = ['사과', '오렌지', '포도', '자몽', '귤', '라임', '딸기', '바나나', '파인애플', '깔라만시'];
+
+        //선택된 과일 리스트
+        const selection = [];
+        const $fruits = document.getElementById('fruits');
+
+        while (selection.length < 5) {
+            const $li = document.createElement('li');
+            const rn = Math.floor(Math.random() * fruitList.length);
+
+            if (!selection.includes(fruitList[rn])) {
+                selection.push(fruitList[rn])
+                $li.textContent = fruitList[rn];
+                $fruits.appendChild($li);
+            }
+        }
+
+        //========================= 로또번호 6자리 생성하기==================/
+        const lotto = [];
+        while (true) {
+            const randomNum = Math.floor(Math.random() * 45) + 1;
+            if (!lotto.includes(randomNum)) {
+                lotto.push(randomNum);
+            }
+            if (lotto.length === 6) break;
+        }
+        console.log(lotto);
+    </script>
+</body>
+
+</html>
