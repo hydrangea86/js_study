@@ -37,3 +37,5 @@ if (!(num % 2)) {
 }else {
     console.log(`홀수입니다.`);
 }
+// undefined, null, 0, NaN, ''(빈문자열)은 모두 false로 판단합니다.
+// 그 이외에는 모두 true로 판단합니다.

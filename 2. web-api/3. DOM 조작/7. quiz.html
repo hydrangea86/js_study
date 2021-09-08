@@ -18,45 +18,40 @@
     <script>
         //1. class="theTitle"인 요소의 자식요소를 innerHTML을 사용하여
         //   <a href="#">요소 객체 조작</a>로 교체하세요.
-        const $h1 = document.querySelector('.theTitle');
-        const $a = document.createElement('a');
-        $a.innerHTML = '<a href="#">요소 객체 조작</a>';
-        $h1.appendChild($a);
-
+        document.querySelector('.theTitle').innerHTML 
+                        = '<a href="#">요소 객체 조작</a>';
 
         //2. class="obj1"인 요소의 텍스트를 "리스트_2"로 변경하세요.
-        const $list = document.querySelector('#list');
-        const $change2 = $list.firstElementChild.cloneNode();
-        $change2.textContent = '리스트2';
-        $list.replaceChild($change2, $list.firstElementChild)
-
+        document.querySelector('.obj1').textContent = '리스트_2';
 
         //### 여기부터는 innerHTML 사용 금지.
 
         //3. id="list"인 요소의 마지막 위치에 새요소 "<li>list_6</li>"를 추가하세요. 
-        const $list6 = document.createElement('li');
-        $list6.textContent = 'list_6';
-        $list.appendChild($list6);
-
+        const $list = document.getElementById('list');
+        
+        const $newLi = document.createElement('li');
+        $newLi.textContent = 'list_6';
+        $list.appendChild($newLi);
+    
 
         //4. id="list"인 요소의 첫 위치에 새요소 "<li>list_1</li>"를 추가하세요.
-
-        const $list_1 = $list.firstElementChild.cloneNode();
-        $list_1.textContent = 'list_1';
-        $list.insertBefore($list_1, $list.firstElementChild);
-
+        const $li1 = $newLi.cloneNode();
+        $li1.textContent = 'list_1';
+        $list.insertBefore($li1, $list.firstElementChild);
+      
 
         //5. class="obj1"인 요소를 깊은 복제후에 id="list"인요소 마지막 위치에 추가
-        const $obj1 = $list.firstElementChild.cloneNode(true);
-        $list.appendChild($obj1);
+        $list.appendChild(document.querySelector('.obj1').cloneNode(true));
+       
 
         //6. id="list"인 요소의 하위 <li>요소중 첫번째 요소 삭제
         $list.removeChild($list.firstElementChild);
 
         //7. ul의 자식 노드를 전부 삭제하세요.
         for (let $target of [...$list.children]) {
-            $list.removeChild($target)
-        };
+            $list.removeChild($target);
+        }
+
     </script>
 </body>
 
