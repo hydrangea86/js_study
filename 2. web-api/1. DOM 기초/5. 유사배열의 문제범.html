@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,38 +9,34 @@
         li {
             font-size: 30px;
         }
-
         .red {
             color: red;
         }
-
         .blue {
             color: blue;
         }
     </style>
 
 </head>
-
 <body>
-
+    
 
     <!-- emmet 문법 div>ul>li*3 / id는 중복 안됌 / class는 중복 가능 -->
 
-    <ul id="fruits">
-        <li class="red">사과</li>
-        <li class="red">바나나</li>
-        <li class="red">포도</li>
-        <li class="red">복숭아</li>
-    </ul>
+        <ul id="fruits">
+            <li class="red">사과</li>
+            <li class="red">바나나</li>
+            <li class="red">포도</li>
+            <li class="red">복숭아</li>
+        </ul>
+       
 
-
-    <script>
+    <script> 
         //$elems: HTMLCollection 유사배열 타입
         const $elems = document.getElementsByClassName('red');
 
-        // for (let i = 0; i < $elems.length; i++) {
-        //     $elems[i].className = 'blue';
-        // }
+        // for(let i = 0; i < $elems.length; i++) {
+        //    $elems[i].className = 'blue';
 
         /*
             HTMLCollection 유사배열은 실시간 변동하는
@@ -55,12 +50,12 @@
         console.log($elems);
         console.log(realArr);
 
-        for (let i = 0; i < realArr.length; i++) {
+        for(let i = 0; i < realArr.length; i++) {
             realArr[i].className = 'blue';
         };
+
     </script>
 
 
 </body>
-
 </html>
