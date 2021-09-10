@@ -33,6 +33,9 @@
 
         const $elems = document.querySelectorAll('#fruits > li');
         console.log($elems);
+        for (let li of [...$elems]){
+            li.style.fontWeight = 'bold';
+        };
     </script>
 
 

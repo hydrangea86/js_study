@@ -16,7 +16,7 @@
         #fruits li {
             width: fit-content;
             cursor: pointer;
-            cursor: pointer;
+            background: lightgray;
             margin-left: 20px;
         }
 
@@ -65,15 +65,15 @@
                         $li.classList.remove('active');
                         break;
                     }
-                };
+                }
                 // 2. 클릭대상에 class="active" 부여
                 //console.log(e.target);
                 e.target.classList.add('active');
                 // 3. em 태그안에 텍스트 선택된 과일명으로 변경
                 // console.log(e.target.textContent);
-                const $em = document.querySelector('msg');
+                const $em = document.querySelector('.msg');
                 $em.textContent = e.target.textContent;
-
+            };
                 // 모든 li에 이벤트 부여
                 for (let $li of [...$fruits.children]) {
                     $li.addEventListener('click', activate);
@@ -97,7 +97,7 @@
                     $newLi.setAttribute('id', $newLi.textContent.toLowerCase());
 
                     // 3. ul에 자식으로 2번에서 만든 li 추가
-                    $fruits.appendChild('$newLi');
+                    $fruits.appendChild($newLi);
 
                     // 4. input창 비우기
                     $tBox.value = '';
