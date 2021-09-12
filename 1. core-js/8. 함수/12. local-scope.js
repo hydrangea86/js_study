@@ -17,7 +17,7 @@ function outer(x) {
 
 var x = `global x`; //전역변수
 
-outer(`outer param x`);
+outer(`outer param x`); //인수도 지역변수임
 console.log(x);
 
 

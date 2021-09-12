@@ -58,7 +58,7 @@ function outer() {
     console.log(`outer call`);
     var x = 1;
 
-    //innersms outer 전용함수다. 따라서 outer영역 내부에서만 호출가능함.
+    //inner는 outer 전용함수다. 따라서 outer영역 내부에서만 호출가능함.
     function inner() {
         console.log(`inner call!`);
     }
