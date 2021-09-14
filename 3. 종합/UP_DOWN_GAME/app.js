@@ -37,10 +37,7 @@ function makeIcons() {
 function checkAnswer($target) {
 
     //객체 디스트럭쳐링(ES6+)
-    const {
-        secret,
-        answer
-    } = gameDatas;
+    const {secret, answer} = gameDatas;
 
     if (secret === answer) { //정답인 경우
         processCorrect($target);
