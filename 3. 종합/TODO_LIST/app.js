@@ -40,16 +40,16 @@ $newLi.classList.add('todo-list-item');
 $newLi.dataset.id = newToDo.id;
 
 $newLi.innerHTML = `
-    <label class="checkbox">
-        <input type="checkbox">
-        <span class="text">${newToDo.text}</span>
-    </label>
-    <div class="modify">
-        <span class="lnr lnr-undo"></span>
-    </div>
-    <div class="remove">
-        <span class="lnr lnr-cross-circle"></span>
-    </div>
+<label class="checkbox">
+<input type="checkbox">
+<span class="text">${newToDo.text}</span>
+</label>
+<div class="modify">
+<span class="lnr lnr-undo"></span>
+</div>
+<div class="remove">
+<span class="lnr lnr-cross-circle"></span>
+</div>
 `;
 
 const $toDoList = document.querySelector('.todo-list');
@@ -67,21 +67,28 @@ const newToDo = {
     text: $todoText.value,
     done: false
 };
-//console.log(newToDo);
 
-todos.push(newToDo);
-//console.log(todos);
+if (newToDo.text !== '') {
+    //console.log(newToDo);
 
-//2. 화면에 데이터 렌더링
-renderNewTodo(newToDo);
+    todos.push(newToDo);
+    //console.log(todos);
 
-//3. 입력 완료 후 input 텍스트 제거
-$todoText.value = '';
+    //2. 화면에 데이터 렌더링
+    renderNewTodo(newToDo);
+
+    //3. 입력 완료 후 input 텍스트 제거
+    $todoText.value = '';
+    $todoText.style.background = '';
+} else {        
+    $todoText.style.background = 'red';
+}
+// console.log(newToDo);
 }
 
 //data-id값으로 배열을 탐색하여 인덱스를 리턴
 function findIndexById(dataId) {
-for (let i=0; i < todos.length; i++) {
+for (let i = 0; i < todos.length; i++) {
     if (todos[i].id === dataId) {
         return i;
     }
@@ -163,23 +170,23 @@ $label.replaceChild($modInput, $textSpan);
 
 // 할 일 수정 완료 처리
 function modifyToDoData($modReturn) {
-    //1. 버튼 모양을 원래대로 되돌림
-    $modReturn.classList.replace('lnr-checkmark-circle', 'lnr-undo' );
-    console.log($modReturn);
+//1. 버튼 모양을 원래대로 되돌림
+$modReturn.classList.replace('lnr-checkmark-circle', 'lnr-undo');
+console.log($modReturn);
 
-    //2. input:text를 다시 span으로 교체
-    const $label = $modReturn.parentNode.previousElementSibling;
-    const $modInput = $label.lastElementChild;
+//2. input:text를 다시 span으로 교체
+const $label = $modReturn.parentNode.previousElementSibling;
+const $modInput = $label.lastElementChild;
 
-    const $newSpan = document.createElement('san');
-    $newSpan.classList.add('text');
-    $newSpan.textContent = $modInput.value;
-    $label.replaceChild($newSpan, $modInput);
+const $newSpan = document.createElement('san');
+$newSpan.classList.add('text');
+$newSpan.textContent = $modInput.value;
+$label.replaceChild($newSpan, $modInput);
 
-    //3. 배열 데이터 수정
-    const idx = findIndexById(+$label.parentNode.dataset.id);
-    todos[idx].text = $newSpan.textContent;
-    console.log(todos);
+//3. 배열 데이터 수정
+const idx = findIndexById(+$label.parentNode.dataset.id);
+todos[idx].text = $newSpan.textContent;
+console.log(todos);
 }
 
 //================== 메인 실행 ==================//
