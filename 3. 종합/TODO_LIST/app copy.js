@@ -68,20 +68,21 @@ function insertTodoData() {
         done: false
     };
 
-    if ($todoText.value.trim !== '') {
+    if (newToDo.text !== '') {
         //console.log(newToDo);
+
         todos.push(newToDo);
         //console.log(todos);
+
         //2. 화면에 데이터 렌더링
         renderNewTodo(newToDo);
+
         //3. 입력 완료 후 input 텍스트 제거
         $todoText.value = '';
         $todoText.style.background = '';
-        $todoText.setAttribute('placeholder','할 일을 입력하세요!');
     } else {
-        $todoText.style.background = 'orangered';
-        $todoText.setAttribute('placeholder','필수 입력사항입니다!');
-        return;   
+        $todoText.style.background = 'red';
+        return;
     }
     console.log(newToDo);
 }
@@ -189,6 +190,21 @@ function modifyToDoData($modReturn) {
     console.log(todos);
 }
 
+// 할 일 추가시 입력값 검증하기
+function isValidate() {
+    const $todoText = document.getElementById('todo-text');
+    
+    if($todoText.value.trim !== '') {
+        $todoText.style.background ='';
+        $todoText.setAttribute('placeholder','할 일을 입력하세요!');
+        return true;
+    } else { // 아무것도 안썻으면
+        $todoText.style.background ='orangered';
+        $todoText.setAttribute('placeholder','필수 입력사항입니다!');
+        return false
+    }
+}
+
 //================== 메인 실행 ==================//
 (function () {
 
@@ -196,8 +212,9 @@ function modifyToDoData($modReturn) {
     const $addBtn = document.getElementById('add');
     $addBtn.addEventListener('click', e => {
         e.preventDefault(); //서버 전송기능 중단
-
-        insertTodoData();
+        if (isValidate()) {
+            insertTodoData();
+        }
     });
 
     //할 일 완료(체크박스) 이벤트
