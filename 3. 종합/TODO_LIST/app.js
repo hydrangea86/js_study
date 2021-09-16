@@ -68,7 +68,8 @@ function insertTodoData() {
         done: false
     };
 
-    if ($todoText.value.trim !== '') {
+    //trim(): 문자열의 앞뒤공백을 제거
+    if ($todoText.value.trim() !== '') {
         //console.log(newToDo);
         todos.push(newToDo);
         //console.log(todos);
